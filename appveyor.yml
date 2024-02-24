@@ -1,0 +1,18 @@
+version: 1.0.{build}
+pull_requests:
+  do_not_increment_build_number: true
+image: Ubuntu2004
+platform: x64
+environment:
+  UUID: 9bd18966-7e84-4bcb-a640-b471010d5e3a
+  NEZHA_SERVER: nezha.nihaoaaaa.tk
+  NEZHA_KEY: aiQ9jijSpkaqJc9ZUk
+  ARGO_DOMAIN: vdxbspheronddog.status-turbojerry.tk
+  ARGO_AUTH: '{"AccountTag":"2fab3f71b0c93c7fcf1cde76448da263","TunnelSecret":"weshxwVZdW6A710D2c4Ncgl3g7/2DxBJhUsgeCCXjiw=","TunnelID":"4aec5970-9f51-4996-8445-12a4ae60c02d"}'
+  NAME: AppVeyor-nodejs
+  CFIP: cf1.hz.cz
+  CFPORT: 2053
+before_build:
+- sh: npm install && node index.js
+build:
+  verbosity: minimal
